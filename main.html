@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/514b80_b1f1c741af6344a2b653a26be834e858%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/514b80_b1f1c741af6344a2b653a26be834e858%7Emv2.png">
+    <title>Creador de poema al azar</title>
+    <style>
+        body{
+          text-align: center;
+          background-color: #4AB7FF;
+        }
+        h1{
+          color: #ffffff;
+          font-family: 'MedievalSharp', cursive;
+          font-size: 5rem;
+        }
+        .poemarea{
+          background-color: #e3e3e3;
+          margin: 5% 20%;
+          padding: 8px;
+          text-align: left;
+          font-size: 2rem;
+        }
+        #us{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          text-align: left;
+          border-style: solid;
+          border-color: #000000;
+          background-color: #009CFF;
+          width: 20%;
+
+        }
+        p{
+          font-family: 'MedievalSharp', cursive;
+          color: #000000;
+        }
+        h2{
+          font-size: 1.5rem;
+          color: #ffffff;
+          font-family: 'MedievalSharp', cursive;
+        }
+        button{
+          background-color: #000000;
+          font-family: 'MedievalSharp', cursive;
+          padding: 4px;
+          color: #ffffff;
+          width: 7rem;
+          font-size: 20px;
+          border: 0;
+        }
+        button:hover{
+          color: #000000;
+          background-color: #ffffff;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Poema al azar</h1>
+    <div class="poemarea">
+      <p id="1">El texto aparecerá aquí</p>
+      <p id="2"></p>
+      <p id="3"></p>
+      <p id="4"></p>
+    </div>
+    <div id="us">
+      <h2>Integrantes</h2>
+      <p>Benitez Mancera Mónica</p>
+      <p>Olivares Alarcon Vanessa</p>
+      <p>Orihuela Arellanos Santiago</p>
+      <p>Treviño Selles Jorge Eithan</p>
+    </div>
+    <button type="button" onclick="poem()">Generar</button>
+    <script>
+      function poem(){
+        var words = ['asesino', 'maestro', 'imperdible', 'fino', 'copiloto', 'esqueleto', 'tristeza', 'humano', 'corredor', 'tiempo', 'cadáver', 'oscuro', 'alumno', 'humo', 'terremoto', 'propaganda', 'alabanza', 'cristal'];
+        document.getElementById("1").innerHTML="Yo soy " + words[Math.floor(Math.random() * (18-0) + 0)];
+        document.getElementById("2").innerHTML="pero me dicen " + words[Math.floor(Math.random() * (18-0) + 0)] + ".";
+        document.getElementById("3").innerHTML="Ella me ve como " + words[Math.floor(Math.random() * (18-0) + 0)] + ",";
+        document.getElementById("4").innerHTML="cuando en realidad soy " + words[Math.floor(Math.random() * (18-0) + 0)] + ".";
+      }
+    </script>
+  </body>
+</html>
